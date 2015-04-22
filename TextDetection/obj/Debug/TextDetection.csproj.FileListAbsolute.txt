@@ -1,0 +1,1 @@
+c:\users\hifza\documents\visual studio 2013\Projects\TextDetection\TextDetection\bin\Debug\TextDetection.exe.config
