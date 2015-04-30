@@ -1,7 +1,6 @@
 c:\users\hifza\documents\visual studio 2013\Projects\TextDetection\TextDetection\bin\Debug\TextDetection.exe.config
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\bin\Debug\TextDetection.exe
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\bin\Debug\TextDetection.pdb
-C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.csprojResolveAssemblyReference.cache
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.Properties.Resources.resources
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.csproj.GenerateResource.Cache
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.exe
@@ -60,3 +59,4 @@ C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.Text_identifier.resources
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.MainMenu.resources
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.Form_Language.resources
+C:\Users\HIFZA\Documents\Visual Studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.MM_help.resources

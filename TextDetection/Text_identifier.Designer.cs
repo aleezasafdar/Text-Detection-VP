@@ -28,32 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Text_identifier));
             this.ButtonScan = new System.Windows.Forms.Button();
             this.buttonUpload = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.buttonCrop = new System.Windows.Forms.PictureBox();
+            this.OutputTextBox = new System.Windows.Forms.RichTextBox();
             this.btn_rotateAntiClock = new System.Windows.Forms.PictureBox();
-            this.inputImagebox = new System.Windows.Forms.PictureBox();
             this.btn_rotateClock = new System.Windows.Forms.PictureBox();
             this.buttonSave = new System.Windows.Forms.PictureBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.buttonUndo = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonCrop)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.inputImagebox = new Emgu.CV.UI.ImageBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_rotateAntiClock)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputImagebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_rotateClock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonSave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputImagebox)).BeginInit();
             this.SuspendLayout();
             // 
             // ButtonScan
             // 
-            this.ButtonScan.Location = new System.Drawing.Point(251, 26);
+            this.ButtonScan.Location = new System.Drawing.Point(251, 41);
             this.ButtonScan.Name = "ButtonScan";
             this.ButtonScan.Size = new System.Drawing.Size(75, 30);
             this.ButtonScan.TabIndex = 0;
             this.ButtonScan.Text = "Scan";
             this.ButtonScan.UseVisualStyleBackColor = true;
+            this.ButtonScan.Click += new System.EventHandler(this.ButtonScan_Click);
             // 
             // buttonUpload
             // 
@@ -65,31 +66,20 @@
             this.buttonUpload.UseVisualStyleBackColor = true;
             this.buttonUpload.Click += new System.EventHandler(this.buttonUpload_Click);
             // 
-            // richTextBox1
+            // OutputTextBox
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.richTextBox1.Location = new System.Drawing.Point(17, 263);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(309, 77);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
-            // 
-            // buttonCrop
-            // 
-            this.buttonCrop.ImageLocation = "C:\\Users\\HIFZA\\Documents\\Visual Studio 2013\\Projects\\TextDetection\\VP Project Fil" +
-    "es\\cropping.jpg";
-            this.buttonCrop.Location = new System.Drawing.Point(17, 26);
-            this.buttonCrop.Name = "buttonCrop";
-            this.buttonCrop.Size = new System.Drawing.Size(31, 30);
-            this.buttonCrop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.buttonCrop.TabIndex = 3;
-            this.buttonCrop.TabStop = false;
+            this.OutputTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.OutputTextBox.Location = new System.Drawing.Point(17, 263);
+            this.OutputTextBox.Name = "OutputTextBox";
+            this.OutputTextBox.Size = new System.Drawing.Size(309, 77);
+            this.OutputTextBox.TabIndex = 2;
+            this.OutputTextBox.Text = "";
             // 
             // btn_rotateAntiClock
             // 
             this.btn_rotateAntiClock.ImageLocation = "C:\\Users\\HIFZA\\Documents\\Visual Studio 2013\\Projects\\TextDetection\\VP Project Fil" +
     "es\\RotateAnticlock.jpg";
-            this.btn_rotateAntiClock.Location = new System.Drawing.Point(162, 26);
+            this.btn_rotateAntiClock.Location = new System.Drawing.Point(54, 41);
             this.btn_rotateAntiClock.Name = "btn_rotateAntiClock";
             this.btn_rotateAntiClock.Size = new System.Drawing.Size(31, 30);
             this.btn_rotateAntiClock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -97,25 +87,11 @@
             this.btn_rotateAntiClock.TabStop = false;
             this.btn_rotateAntiClock.Click += new System.EventHandler(this.btn_rotateAntiClock_Click);
             // 
-            // inputImagebox
-            // 
-            this.inputImagebox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.inputImagebox.Location = new System.Drawing.Point(17, 62);
-            this.inputImagebox.Name = "inputImagebox";
-            this.inputImagebox.Size = new System.Drawing.Size(309, 195);
-            this.inputImagebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.inputImagebox.TabIndex = 5;
-            this.inputImagebox.TabStop = false;
-            this.inputImagebox.Click += new System.EventHandler(this.inputImagebox_Click);
-            this.inputImagebox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.inputImagebox_MouseDown);
-            this.inputImagebox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.inputImagebox_MouseMove);
-            this.inputImagebox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.inputImagebox_MouseUp);
-            // 
             // btn_rotateClock
             // 
             this.btn_rotateClock.ImageLocation = "C:\\Users\\HIFZA\\Documents\\Visual Studio 2013\\Projects\\TextDetection\\VP Project Fil" +
     "es\\RotateClock.jpg";
-            this.btn_rotateClock.Location = new System.Drawing.Point(125, 26);
+            this.btn_rotateClock.Location = new System.Drawing.Point(17, 41);
             this.btn_rotateClock.Name = "btn_rotateClock";
             this.btn_rotateClock.Size = new System.Drawing.Size(31, 30);
             this.btn_rotateClock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -135,20 +111,25 @@
             this.buttonSave.TabStop = false;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
-            // saveFileDialog1
+            // pictureBox1
             // 
-            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
+            this.pictureBox1.ImageLocation = "F:\\VP Project Files\\download.jpg";
+            this.pictureBox1.Location = new System.Drawing.Point(277, 375);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // buttonUndo
+            // inputImagebox
             // 
-            this.buttonUndo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonUndo.Location = new System.Drawing.Point(55, 26);
-            this.buttonUndo.Name = "buttonUndo";
-            this.buttonUndo.Size = new System.Drawing.Size(40, 30);
-            this.buttonUndo.TabIndex = 8;
-            this.buttonUndo.Text = "undo";
-            this.buttonUndo.UseVisualStyleBackColor = true;
-            this.buttonUndo.Click += new System.EventHandler(this.buttonUndo_Click);
+            this.inputImagebox.Location = new System.Drawing.Point(17, 77);
+            this.inputImagebox.Name = "inputImagebox";
+            this.inputImagebox.Size = new System.Drawing.Size(309, 180);
+            this.inputImagebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.inputImagebox.TabIndex = 2;
+            this.inputImagebox.TabStop = false;
             // 
             // Text_identifier
             // 
@@ -156,23 +137,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(347, 381);
-            this.Controls.Add(this.buttonUndo);
+            this.ClientSize = new System.Drawing.Size(333, 438);
+            this.Controls.Add(this.inputImagebox);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.btn_rotateClock);
-            this.Controls.Add(this.inputImagebox);
             this.Controls.Add(this.btn_rotateAntiClock);
-            this.Controls.Add(this.buttonCrop);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.OutputTextBox);
             this.Controls.Add(this.buttonUpload);
             this.Controls.Add(this.ButtonScan);
             this.Name = "Text_identifier";
-            this.Text = "Text Identifer ";
-            ((System.ComponentModel.ISupportInitialize)(this.buttonCrop)).EndInit();
+            this.Text = "Text_Identifer ";
             ((System.ComponentModel.ISupportInitialize)(this.btn_rotateAntiClock)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inputImagebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_rotateClock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonSave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inputImagebox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -181,14 +161,13 @@
 
         private System.Windows.Forms.Button ButtonScan;
         private System.Windows.Forms.Button buttonUpload;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.PictureBox buttonCrop;
+        private System.Windows.Forms.RichTextBox OutputTextBox;
         private System.Windows.Forms.PictureBox btn_rotateAntiClock;
-        private System.Windows.Forms.PictureBox inputImagebox;
         private System.Windows.Forms.PictureBox btn_rotateClock;
         private System.Windows.Forms.PictureBox buttonSave;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button buttonUndo;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Emgu.CV.UI.ImageBox inputImagebox;
     }
 }
 

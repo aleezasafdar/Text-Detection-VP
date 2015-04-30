@@ -39,6 +39,9 @@ namespace TextDetection
 
         private void MM_help_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            var form_help = new MM_help();
+            form_help.Show();
 
         }
 

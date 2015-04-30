@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace TextDetection
 {
-    public partial class Form_Language : Form
+    public partial class MM_help : Form
     {
-        public Form_Language()
+        public MM_help()
         {
             InitializeComponent();
         }
 
-        private void Language_menu_Click(object sender, EventArgs e)
+        private void Help_menu_Click(object sender, EventArgs e)
         {
             this.Hide();
             var form_menu = new MainMenu();
             form_menu.Show();
+
         }
     }
 }
-
