@@ -14,11 +14,15 @@ using Emgu.CV.CvEnum;
 using Emgu.CV.OCR;
 using Emgu.CV.UI;
 using Emgu.Util;
+using System.Windows;
 
 namespace TextDetection
 {
     public partial class Text_identifier : Form
     {
+        string one,two;
+           
+       
         Tesseract tess;
 
         Image<Bgr, Byte> emgu_inputImage=null;
@@ -71,7 +75,7 @@ namespace TextDetection
             {
                 inputImagebox.ImageLocation = uploadPic.FileName;
                 emgu_inputImage = new Image<Bgr, byte>(uploadPic.FileName);
-                MessageBox.Show(uploadPic.FileName);
+              
 
             }
 
@@ -112,7 +116,6 @@ namespace TextDetection
 
         private void ButtonScan_Click(object sender, EventArgs e)
         {
-            string one;
            
             
             inputImagebox.Image = blank;
@@ -121,13 +124,72 @@ namespace TextDetection
             one = tess.GetText();
             inputImagebox.Image = emgu_inputImage;
 
-            MessageBox.Show(one);
+            OutputTextBox.Text = one;
            
 
 
             
 
 
+        }
+        
+
+      
+    
+
+        private void Text_identifier_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmp_btn_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+
+                using (StreamReader sr = new StreamReader(@"C:\Users\HIFZA\Documents\Visual Studio 2013\Projects\TextDetection\Test.txt"))
+                {
+
+                    two = sr.ReadToEnd();
+                    
+                }
+            }
+            catch (Exception a)
+            {
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(a.Message);
+            }
+
+            int loop = 0;
+            double check = 0;
+            double siz, percentage;
+            siz = 0;
+
+
+
+
+            char[] charproces = two.ToCharArray();
+            char[] charorgin = one.ToCharArray();
+            while (loop < charproces.Length)
+            {
+                if (charproces[loop] == charorgin[loop])
+                {
+                    check++;
+
+
+                }
+                loop++;
+
+            }
+            siz = charproces.Length;
+            percentage = ((check / siz) * 100);
+            Console.WriteLine(percentage);
+            Console.WriteLine(check);
+            Console.WriteLine(charorgin.Length);
+
+            Console.ReadKey();
+            
         }
 
        

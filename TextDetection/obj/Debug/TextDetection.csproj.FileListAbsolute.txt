@@ -60,3 +60,4 @@ C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.MainMenu.resources
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.Form_Language.resources
 C:\Users\HIFZA\Documents\Visual Studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.MM_help.resources
+C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.csprojResolveAssemblyReference.cache
