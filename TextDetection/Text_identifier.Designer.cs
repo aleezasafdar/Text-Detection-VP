@@ -69,7 +69,7 @@
             // 
             // OutputTextBox
             // 
-            this.OutputTextBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.OutputTextBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.OutputTextBox.Location = new System.Drawing.Point(17, 263);
             this.OutputTextBox.Name = "OutputTextBox";
             this.OutputTextBox.Size = new System.Drawing.Size(309, 77);
@@ -125,6 +125,7 @@
             // 
             // inputImagebox
             // 
+            this.inputImagebox.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.inputImagebox.Location = new System.Drawing.Point(17, 77);
             this.inputImagebox.Name = "inputImagebox";
             this.inputImagebox.Size = new System.Drawing.Size(309, 180);

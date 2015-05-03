@@ -1,0 +1,15 @@
+1:Performance Requirements
+ The performance requirements, as the name suggests, refers to the performance of the
+system i.e. how effectively and efficiently the system does the tasks for which it was designed
+for.These include for example the speed of processing,memory utilization efficiency etc.
+Performance requirements are one most vital aspects of an SRS document so these require
+special consideration. Some examples of performance requirement are:
+
+> For instance we want to create a system to be able to compare the specifications of 
+  different smartphones. A performance requirement would be that up to 5 different
+  smartphones specifications should be displayed within 30 milliseconds.
+> Suppose we want to create a network for data sharing between users. A performance 
+  requirement would be that upto 150 users can send and receive data without the
+  server slowing down.
+> Suppose we want to create software to handle orders in restaurant. The software
+  should be able to handle 3 orders at a time without error

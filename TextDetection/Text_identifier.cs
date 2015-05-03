@@ -20,13 +20,13 @@ namespace TextDetection
 {
     public partial class Text_identifier : Form
     {
-        string one,two;
-           
-       
+        string one, two;
+
+
         Tesseract tess;
 
-        Image<Bgr, Byte> emgu_inputImage=null;
-       
+        Image<Bgr, Byte> emgu_inputImage = null;
+
         Image<Bgr, Byte> blank = null;
         public Text_identifier()
         {
@@ -75,7 +75,7 @@ namespace TextDetection
             {
                 inputImagebox.ImageLocation = uploadPic.FileName;
                 emgu_inputImage = new Image<Bgr, byte>(uploadPic.FileName);
-              
+
 
             }
 
@@ -94,7 +94,7 @@ namespace TextDetection
 
         }
 
-      
+
 
 
         private void inputImagebox_Click(object sender, EventArgs e)
@@ -109,15 +109,15 @@ namespace TextDetection
             textID_home.Show();
 
         }
-       
-        
-         
+
+
+
 
 
         private void ButtonScan_Click(object sender, EventArgs e)
         {
-           
-            
+
+
             inputImagebox.Image = blank;
             Application.DoEvents();
             tess.Recognize(emgu_inputImage);
@@ -125,17 +125,16 @@ namespace TextDetection
             inputImagebox.Image = emgu_inputImage;
 
             OutputTextBox.Text = one;
-           
 
 
-            
+
+
 
 
         }
-        
 
-      
-    
+
+
 
         private void Text_identifier_Load(object sender, EventArgs e)
         {
@@ -144,58 +143,53 @@ namespace TextDetection
 
         private void cmp_btn_Click(object sender, EventArgs e)
         {
+           
 
-            try
-            {
-
-                using (StreamReader sr = new StreamReader(@"C:\Users\HIFZA\Documents\Visual Studio 2013\Projects\TextDetection\Test.txt"))
-                {
-
-                    two = sr.ReadToEnd();
+            StreamReader sr = new StreamReader(@"C:\Users\HIFZA\Documents\Visual Studio 2013\Projects\TextDetection\VP Project Files\sample 3 textfile.txt");
                     
-                }
-            }
-            catch (Exception a)
-            {
-                Console.WriteLine("The file could not be read:");
-                Console.WriteLine(a.Message);
-            }
 
-            int loop = 0;
-            double check = 0;
-            double siz, percentage;
-            siz = 0;
+             two = sr.ReadToEnd();
+              MessageBox.Show(two);
 
+                    
+
+              int loop = 0;
+              double check = 0;
+              double siz;
+              double percentage;
+              siz = 0;
 
 
 
-            char[] charproces = two.ToCharArray();
-            char[] charorgin = one.ToCharArray();
-            while (loop < charproces.Length)
-            {
-                if (charproces[loop] == charorgin[loop])
+
+                char[] charproces = two.ToCharArray();
+                char[] charorgin = one.ToCharArray();
+                while (loop < charorgin.Length)
                 {
-                    check++;
+                    if (charproces[loop] == charorgin[loop])
+                    {
+                        check++;
 
+
+                    }
+                    loop++;
 
                 }
-                loop++;
+                siz = charproces.Length;
+                percentage = ((check / siz) * 100);
+
+
+                MessageBox.Show("percentage="+percentage.ToString());
+                MessageBox.Show("Total number of matched characters="+check.ToString());
+                MessageBox.Show("Total characters in orignal image="+charorgin.Length.ToString());
+
 
             }
-            siz = charproces.Length;
-            percentage = ((check / siz) * 100);
-            Console.WriteLine(percentage);
-            Console.WriteLine(check);
-            Console.WriteLine(charorgin.Length);
 
-            Console.ReadKey();
-            
+
         }
 
-       
     }
-
-}
 
 
        
