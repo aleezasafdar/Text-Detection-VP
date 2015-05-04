@@ -40,6 +40,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.inputImagebox = new Emgu.CV.UI.ImageBox();
             this.cmp_btn = new System.Windows.Forms.Button();
+            this.wordPer = new System.Windows.Forms.TextBox();
+            this.charPer = new System.Windows.Forms.TextBox();
+            this.totalPer = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btn_rotateAntiClock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_rotateClock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonSave)).BeginInit();
@@ -143,6 +149,57 @@
             this.cmp_btn.UseVisualStyleBackColor = true;
             this.cmp_btn.Click += new System.EventHandler(this.cmp_btn_Click);
             // 
+            // wordPer
+            // 
+            this.wordPer.Location = new System.Drawing.Point(343, 132);
+            this.wordPer.Name = "wordPer";
+            this.wordPer.ReadOnly = true;
+            this.wordPer.Size = new System.Drawing.Size(75, 20);
+            this.wordPer.TabIndex = 11;
+            // 
+            // charPer
+            // 
+            this.charPer.Location = new System.Drawing.Point(343, 182);
+            this.charPer.Name = "charPer";
+            this.charPer.ReadOnly = true;
+            this.charPer.Size = new System.Drawing.Size(75, 20);
+            this.charPer.TabIndex = 12;
+            // 
+            // totalPer
+            // 
+            this.totalPer.Location = new System.Drawing.Point(343, 237);
+            this.totalPer.Name = "totalPer";
+            this.totalPer.ReadOnly = true;
+            this.totalPer.Size = new System.Drawing.Size(75, 20);
+            this.totalPer.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(343, 113);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Word %";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(343, 166);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Character %";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(343, 221);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Final %";
+            // 
             // Text_identifier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,6 +207,12 @@
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(438, 438);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.totalPer);
+            this.Controls.Add(this.charPer);
+            this.Controls.Add(this.wordPer);
             this.Controls.Add(this.cmp_btn);
             this.Controls.Add(this.inputImagebox);
             this.Controls.Add(this.pictureBox1);
@@ -168,6 +231,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inputImagebox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -183,6 +247,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Emgu.CV.UI.ImageBox inputImagebox;
         private System.Windows.Forms.Button cmp_btn;
+        private System.Windows.Forms.TextBox wordPer;
+        private System.Windows.Forms.TextBox charPer;
+        private System.Windows.Forms.TextBox totalPer;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

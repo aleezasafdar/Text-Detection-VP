@@ -145,43 +145,76 @@ namespace TextDetection
         {
            
 
-            StreamReader sr = new StreamReader(@"C:\Users\HIFZA\Documents\Visual Studio 2013\Projects\TextDetection\VP Project Files\sample 3 textfile.txt");
+            StreamReader sr = new StreamReader(@"C:\Users\HIFZA\Documents\Visual Studio 2013\Projects\TextDetection\VP Project Files\sample 9 textfile.txt");
                     
 
              two = sr.ReadToEnd();
-              MessageBox.Show(two);
+         //  MessageBox.Show(two);
 
                     
 
               int loop = 0;
+              int loopLength=0;
               double check = 0;
-              double siz;
-              double percentage;
-              siz = 0;
+              double charpercentage;
+              double wordpercentage;
+              double totalPercentage;
 
+              double wordcheck=0;
+            string [] wordproces=one.Split(' ');
 
-
-
-                char[] charproces = two.ToCharArray();
-                char[] charorgin = one.ToCharArray();
-                while (loop < charorgin.Length)
+            foreach(string element in wordproces)
+            {
+                if(two.Contains(element)==true)
                 {
-                    if (charproces[loop] == charorgin[loop])
-                    {
-                        check++;
+                    wordcheck++;
+                }
+            }
+            //MessageBox.Show((wordproces.Length.ToString()));
+            wordpercentage = ((wordcheck / wordproces.Length) * 100);
 
 
-                    }
-                    loop++;
+
+            char[] charorgin = two.ToCharArray();
+            char[] charproces = one.ToCharArray();
+            if (charorgin.Length < charproces.Length)
+            {
+                loopLength = charorgin.Length;
+            }
+            else
+            {
+                loopLength = charproces.Length;
+            }
+
+            while (loop < loopLength)
+            {
+                if (charproces[loop] == charorgin[loop])
+                {
+                    check++;
+
 
                 }
-                siz = charproces.Length;
-                percentage = ((check / siz) * 100);
+                loop++;
+
+            }
+            charpercentage = ((check / loopLength) * 100);
+
+            totalPercentage=(charpercentage+wordpercentage)/2;
+
+            //MessageBox.Show("word percentage=" + wordpercentage.ToString());
+            //MessageBox.Show("Total number of matched characters=" + wordcheck.ToString());
+            //MessageBox.Show("Total characters in orignal image=" + wordproces.Length.ToString());
+
+            //MessageBox.Show("character percentage=" + charpercentage.ToString());
+            //MessageBox.Show("Total number of matched characters=" + check.ToString());
+            //MessageBox.Show("Total characters in orignal image=" + charorgin.Length.ToString());
+
+            //MessageBox.Show("Final Result " + totalPercentage.ToString());
 
 
-                MessageBox.Show("percentage="+percentage.ToString());
-                MessageBox.Show("Total number of matched characters="+check.ToString());
-                MessageBox.Show("Total characters in orignal image="+charorgin.Length.ToString());
+            wordPer.Text=wordpercentage.ToString();
+            charPer.Text=charpercentage.ToString();
+            totalPer.Text=totalPercentage.ToString();
 
 
             }
