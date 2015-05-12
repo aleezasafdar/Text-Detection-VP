@@ -25,7 +25,7 @@ namespace TextDetection
         private void MM_proceed_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form_change = new Text_identifier();
+            var form_change = new Text_Detector();
             form_change.Show();
         }
 
