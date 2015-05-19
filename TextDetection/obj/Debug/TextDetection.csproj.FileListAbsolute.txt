@@ -22,7 +22,6 @@ C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.MainMenu.resources
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.Form_Language.resources
 C:\Users\HIFZA\Documents\Visual Studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.MM_help.resources
-C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.csprojResolveAssemblyReference.cache
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\bin\Debug\x64\liblept168.dll
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\bin\Debug\x64\libtesseract302.dll
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\bin\Debug\x86\liblept168.dll
@@ -30,3 +29,4 @@ C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\bin\Debug\Tesseract.dll
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\bin\Debug\Tesseract.xml
 C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.Text_Detector.resources
+C:\Users\HIFZA\documents\visual studio 2013\Projects\TextDetection\TextDetection\obj\Debug\TextDetection.csprojResolveAssemblyReference.cache

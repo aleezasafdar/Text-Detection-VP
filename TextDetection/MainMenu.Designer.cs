@@ -32,7 +32,7 @@
             this.MM_proceed = new System.Windows.Forms.Button();
             this.MM_language = new System.Windows.Forms.Button();
             this.MM_help = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Mainmenu_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // MM_proceed
@@ -65,15 +65,17 @@
             this.MM_help.UseVisualStyleBackColor = true;
             this.MM_help.Click += new System.EventHandler(this.MM_help_Click);
             // 
-            // label1
+            // Mainmenu_label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Forte", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 26);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Welcom to Text detector ";
+            this.Mainmenu_label.AutoSize = true;
+            this.Mainmenu_label.Font = new System.Drawing.Font("Forte", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mainmenu_label.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Mainmenu_label.Location = new System.Drawing.Point(31, 21);
+            this.Mainmenu_label.Name = "Mainmenu_label";
+            this.Mainmenu_label.Size = new System.Drawing.Size(284, 26);
+            this.Mainmenu_label.TabIndex = 3;
+            this.Mainmenu_label.Text = "Welcom to Text detector ";
+            this.Mainmenu_label.Click += new System.EventHandler(this.Mainmenu_label_Click);
             // 
             // MainMenu
             // 
@@ -82,7 +84,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(352, 314);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Mainmenu_label);
             this.Controls.Add(this.MM_help);
             this.Controls.Add(this.MM_language);
             this.Controls.Add(this.MM_proceed);
@@ -99,6 +101,6 @@
         private System.Windows.Forms.Button MM_proceed;
         private System.Windows.Forms.Button MM_language;
         private System.Windows.Forms.Button MM_help;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Mainmenu_label;
     }
 }

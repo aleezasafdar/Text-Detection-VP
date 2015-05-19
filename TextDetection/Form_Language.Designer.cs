@@ -43,9 +43,10 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Britannic Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(20, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 41);
+            this.label1.Size = new System.Drawing.Size(276, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Select a language you want to detect from an image";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -56,9 +57,10 @@
             this.LS_OptionGroup.Controls.Add(this.radioButton3);
             this.LS_OptionGroup.Controls.Add(this.radioButton2);
             this.LS_OptionGroup.Controls.Add(this.LS_English);
-            this.LS_OptionGroup.Location = new System.Drawing.Point(22, 53);
+            this.LS_OptionGroup.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.LS_OptionGroup.Location = new System.Drawing.Point(22, 65);
             this.LS_OptionGroup.Name = "LS_OptionGroup";
-            this.LS_OptionGroup.Size = new System.Drawing.Size(250, 196);
+            this.LS_OptionGroup.Size = new System.Drawing.Size(274, 195);
             this.LS_OptionGroup.TabIndex = 1;
             this.LS_OptionGroup.TabStop = false;
             this.LS_OptionGroup.Text = "Langauge Options";
@@ -111,8 +113,9 @@
             // 
             // Language_menu
             // 
+            this.Language_menu.Image = ((System.Drawing.Image)(resources.GetObject("Language_menu.Image")));
             this.Language_menu.ImageLocation = "F:\\VP Project Files\\download.jpg";
-            this.Language_menu.Location = new System.Drawing.Point(22, 266);
+            this.Language_menu.Location = new System.Drawing.Point(22, 282);
             this.Language_menu.Name = "Language_menu";
             this.Language_menu.Size = new System.Drawing.Size(77, 38);
             this.Language_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,7 +128,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(317, 332);
+            this.ClientSize = new System.Drawing.Size(321, 346);
             this.Controls.Add(this.Language_menu);
             this.Controls.Add(this.LS_OptionGroup);
             this.Controls.Add(this.label1);

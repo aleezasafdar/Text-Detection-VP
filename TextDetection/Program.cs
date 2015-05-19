@@ -16,7 +16,7 @@ namespace TextDetection
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Text_Detector());
+            Application.Run(new MainMenu());
         }
     }
 }

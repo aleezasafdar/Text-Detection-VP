@@ -45,6 +45,12 @@ namespace TextDetection
 
         }
 
+        private void Mainmenu_label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
        
     }
 }

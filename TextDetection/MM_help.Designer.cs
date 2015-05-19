@@ -60,6 +60,7 @@
             // 
             // Help_menu
             // 
+            this.Help_menu.Image = ((System.Drawing.Image)(resources.GetObject("Help_menu.Image")));
             this.Help_menu.ImageLocation = "F:\\VP Project Files\\download.jpg";
             this.Help_menu.Location = new System.Drawing.Point(29, 286);
             this.Help_menu.Name = "Help_menu";
@@ -72,6 +73,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Engravers MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Location = new System.Drawing.Point(155, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 33);
