@@ -43,7 +43,8 @@
             this.blurBtn = new System.Windows.Forms.Button();
             this.sepiaBtn = new System.Windows.Forms.Button();
             this.Cropbtn = new System.Windows.Forms.Button();
-            this.resizeBtn = new System.Windows.Forms.Button();
+            this.Sharp_btn = new System.Windows.Forms.Button();
+            this.Defaultbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btn_rotateClock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_rotateAntiClock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonSave)).BeginInit();
@@ -55,7 +56,7 @@
             // 
             this.btn_rotateClock.ImageLocation = "C:\\Users\\HIFZA\\Documents\\Visual Studio 2013\\Projects\\TextDetection\\VP Project Fil" +
     "es\\RotateClock.jpg";
-            this.btn_rotateClock.Location = new System.Drawing.Point(82, 12);
+            this.btn_rotateClock.Location = new System.Drawing.Point(97, 12);
             this.btn_rotateClock.Name = "btn_rotateClock";
             this.btn_rotateClock.Size = new System.Drawing.Size(31, 30);
             this.btn_rotateClock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -67,7 +68,7 @@
             // 
             this.btn_rotateAntiClock.ImageLocation = "C:\\Users\\HIFZA\\Documents\\Visual Studio 2013\\Projects\\TextDetection\\VP Project Fil" +
     "es\\RotateAnticlock.jpg";
-            this.btn_rotateAntiClock.Location = new System.Drawing.Point(131, 12);
+            this.btn_rotateAntiClock.Location = new System.Drawing.Point(152, 12);
             this.btn_rotateAntiClock.Name = "btn_rotateAntiClock";
             this.btn_rotateAntiClock.Size = new System.Drawing.Size(31, 30);
             this.btn_rotateAntiClock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -90,7 +91,7 @@
     "es\\save.jpg";
             this.buttonSave.Location = new System.Drawing.Point(46, 428);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(40, 30);
+            this.buttonSave.Size = new System.Drawing.Size(52, 41);
             this.buttonSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.buttonSave.TabIndex = 11;
             this.buttonSave.TabStop = false;
@@ -99,9 +100,11 @@
             // ButtonScan
             // 
             this.ButtonScan.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ButtonScan.Location = new System.Drawing.Point(520, 424);
+            this.ButtonScan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonScan.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.ButtonScan.Location = new System.Drawing.Point(520, 423);
             this.ButtonScan.Name = "ButtonScan";
-            this.ButtonScan.Size = new System.Drawing.Size(108, 34);
+            this.ButtonScan.Size = new System.Drawing.Size(108, 35);
             this.ButtonScan.TabIndex = 12;
             this.ButtonScan.Text = "Scan";
             this.ButtonScan.UseVisualStyleBackColor = false;
@@ -122,9 +125,11 @@
             // Uploadbtn
             // 
             this.Uploadbtn.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Uploadbtn.Location = new System.Drawing.Point(388, 423);
+            this.Uploadbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Uploadbtn.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.Uploadbtn.Location = new System.Drawing.Point(370, 423);
             this.Uploadbtn.Name = "Uploadbtn";
-            this.Uploadbtn.Size = new System.Drawing.Size(88, 35);
+            this.Uploadbtn.Size = new System.Drawing.Size(106, 35);
             this.Uploadbtn.TabIndex = 14;
             this.Uploadbtn.Text = "Upload";
             this.Uploadbtn.UseVisualStyleBackColor = false;
@@ -134,7 +139,7 @@
             // 
             this.Confidencebox.AccessibleName = "tu";
             this.Confidencebox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Confidencebox.Location = new System.Drawing.Point(531, 90);
+            this.Confidencebox.Location = new System.Drawing.Point(531, 48);
             this.Confidencebox.Multiline = true;
             this.Confidencebox.Name = "Confidencebox";
             this.Confidencebox.Size = new System.Drawing.Size(97, 73);
@@ -143,7 +148,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label1.Location = new System.Drawing.Point(528, 48);
+            this.label1.Location = new System.Drawing.Point(528, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 16;
@@ -157,7 +162,7 @@
             this.Mainmenu_return.InitialImage = ((System.Drawing.Image)(resources.GetObject("Mainmenu_return.InitialImage")));
             this.Mainmenu_return.Location = new System.Drawing.Point(12, 2);
             this.Mainmenu_return.Name = "Mainmenu_return";
-            this.Mainmenu_return.Size = new System.Drawing.Size(57, 40);
+            this.Mainmenu_return.Size = new System.Drawing.Size(65, 40);
             this.Mainmenu_return.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Mainmenu_return.TabIndex = 17;
             this.Mainmenu_return.TabStop = false;
@@ -165,9 +170,11 @@
             // 
             // blurBtn
             // 
-            this.blurBtn.Location = new System.Drawing.Point(531, 189);
+            this.blurBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blurBtn.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.blurBtn.Location = new System.Drawing.Point(531, 127);
             this.blurBtn.Name = "blurBtn";
-            this.blurBtn.Size = new System.Drawing.Size(97, 23);
+            this.blurBtn.Size = new System.Drawing.Size(97, 35);
             this.blurBtn.TabIndex = 18;
             this.blurBtn.Text = "Blur";
             this.blurBtn.UseVisualStyleBackColor = true;
@@ -175,9 +182,11 @@
             // 
             // sepiaBtn
             // 
-            this.sepiaBtn.Location = new System.Drawing.Point(531, 229);
+            this.sepiaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sepiaBtn.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.sepiaBtn.Location = new System.Drawing.Point(531, 168);
             this.sepiaBtn.Name = "sepiaBtn";
-            this.sepiaBtn.Size = new System.Drawing.Size(97, 23);
+            this.sepiaBtn.Size = new System.Drawing.Size(97, 39);
             this.sepiaBtn.TabIndex = 19;
             this.sepiaBtn.Text = "Sepia";
             this.sepiaBtn.UseVisualStyleBackColor = true;
@@ -185,30 +194,48 @@
             // 
             // Cropbtn
             // 
-            this.Cropbtn.Location = new System.Drawing.Point(531, 279);
+            this.Cropbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cropbtn.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.Cropbtn.Location = new System.Drawing.Point(531, 213);
             this.Cropbtn.Name = "Cropbtn";
-            this.Cropbtn.Size = new System.Drawing.Size(97, 23);
+            this.Cropbtn.Size = new System.Drawing.Size(97, 39);
             this.Cropbtn.TabIndex = 20;
             this.Cropbtn.Text = "Crop";
             this.Cropbtn.UseVisualStyleBackColor = true;
             this.Cropbtn.Click += new System.EventHandler(this.Cropbtn_Click);
             // 
-            // resizeBtn
+            // Sharp_btn
             // 
-            this.resizeBtn.Location = new System.Drawing.Point(531, 327);
-            this.resizeBtn.Name = "resizeBtn";
-            this.resizeBtn.Size = new System.Drawing.Size(97, 23);
-            this.resizeBtn.TabIndex = 21;
-            this.resizeBtn.Text = "Resize";
-            this.resizeBtn.UseVisualStyleBackColor = true;
+            this.Sharp_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sharp_btn.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.Sharp_btn.Location = new System.Drawing.Point(531, 293);
+            this.Sharp_btn.Name = "Sharp_btn";
+            this.Sharp_btn.Size = new System.Drawing.Size(97, 37);
+            this.Sharp_btn.TabIndex = 22;
+            this.Sharp_btn.Text = "Sharp";
+            this.Sharp_btn.UseVisualStyleBackColor = true;
+            this.Sharp_btn.Click += new System.EventHandler(this.Sharp_btn_Click);
+            // 
+            // Defaultbtn
+            // 
+            this.Defaultbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Defaultbtn.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.Defaultbtn.Location = new System.Drawing.Point(531, 347);
+            this.Defaultbtn.Name = "Defaultbtn";
+            this.Defaultbtn.Size = new System.Drawing.Size(97, 37);
+            this.Defaultbtn.TabIndex = 23;
+            this.Defaultbtn.Text = "Default";
+            this.Defaultbtn.UseVisualStyleBackColor = true;
+            this.Defaultbtn.Click += new System.EventHandler(this.Defaultbtn_Click);
             // 
             // Text_Detector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(706, 494);
-            this.Controls.Add(this.resizeBtn);
+            this.ClientSize = new System.Drawing.Size(866, 507);
+            this.Controls.Add(this.Defaultbtn);
+            this.Controls.Add(this.Sharp_btn);
             this.Controls.Add(this.Cropbtn);
             this.Controls.Add(this.sepiaBtn);
             this.Controls.Add(this.blurBtn);
@@ -250,6 +277,7 @@
         private System.Windows.Forms.Button blurBtn;
         private System.Windows.Forms.Button sepiaBtn;
         private System.Windows.Forms.Button Cropbtn;
-        private System.Windows.Forms.Button resizeBtn;
+        private System.Windows.Forms.Button Sharp_btn;
+        private System.Windows.Forms.Button Defaultbtn;
     }
 }
